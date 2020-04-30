@@ -12,8 +12,9 @@ node{
   }
   stage('Copying Jar to correct folder'){
     cd target
-    del 'C:/Users/deepak/Downloads/Software/JenkinsBuildJar/[*].bkp'
+    del "C:/Users/deepak/Downloads/Software/JenkinsBuildJar/[*].bkp"
+     echo "Step 1 complete"
     //ren C:/Users/deepak/Downloads/Software/JenkinsBuildJar/[*].jar [*].bkp
-    copy '[*].jar' 'C:/Users/deepak/Downloads/Software/JenkinsBuildJar'
+    copy "[*].jar" "C:/Users/deepak/Downloads/Software/JenkinsBuildJar"
   }
 }

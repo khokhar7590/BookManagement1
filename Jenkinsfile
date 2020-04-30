@@ -12,8 +12,8 @@ node{
   }
   stage('Copying Jar to correct folder'){
     cd target
-    del C:/Users/deepak/Downloads/Software/JenkinsBuildJar/*.bkp
-    ren C:/Users/deepak/Downloads/Software/JenkinsBuildJar/*.jar *.bkp
-    copy *.jar C:/Users/deepak/Downloads/Software/JenkinsBuildJar
+    del C:/Users/deepak/Downloads/Software/JenkinsBuildJar/[*].bkp
+    ren C:/Users/deepak/Downloads/Software/JenkinsBuildJar/[*].jar [*].bkp
+    copy [*].jar C:/Users/deepak/Downloads/Software/JenkinsBuildJar
   }
 }

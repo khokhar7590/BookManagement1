@@ -4,7 +4,6 @@ node{
     jdk = tool name: 'JDK8'
     env.JAVA_HOME = "${jdk}"
     echo "jdk installation path is: ${jdk}"
-    def outputFolder = 'C:/Users/deepak/Downloads/Software/JenkinsBuildJar'
   stage('SCM Checkout'){
     git 'https://github.com/khokhar7590/BookManagement'
   }
@@ -13,8 +12,8 @@ node{
   }
   stage('Copying Jar to correct folder'){
     cd target
-      del "${outputFolder}"/*.bkp
-    ren "${outputFolder}"/*.jar *.bkp
-    copy *.jar "${outputFolder}"
+    del C:/Users/deepak/Downloads/Software/JenkinsBuildJar/*.bkp
+    ren C:/Users/deepak/Downloads/Software/JenkinsBuildJar/*.jar *.bkp
+    copy *.jar C:/Users/deepak/Downloads/Software/JenkinsBuildJar
   }
 }

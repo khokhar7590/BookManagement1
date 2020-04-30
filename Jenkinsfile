@@ -12,7 +12,8 @@ node{
   }
   stage('Deployment'){
       cd target
-      java -jar "BookManagement-0.0.1-SNAPSHOT.jar"
+      java -version
+      java -jar 'BookManagement-0.0.1-SNAPSHOT.jar'
      //cd target
      //del "C:/Users/deepak/Downloads/Software/JenkinsBuildJar/*.bkp"
      //echo "Step 1 complete"

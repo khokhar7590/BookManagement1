@@ -12,7 +12,7 @@ node{
   }
   stage('Deployment'){
       cd target
-      java -jar BookManagement-0.0.1-SNAPSHOT.jar --server.port=9001
+      java -jar "BookManagement-0.0.1-SNAPSHOT.jar"
      //cd target
      //del "C:/Users/deepak/Downloads/Software/JenkinsBuildJar/*.bkp"
      //echo "Step 1 complete"

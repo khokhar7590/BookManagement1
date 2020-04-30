@@ -10,11 +10,13 @@ node{
   stage('Compile-Package'){
     bat "${mavenHome}/bin/mvn package"
   }
-  stage('Copying Jar to correct folder'){
-    cd target
-    del "C:/Users/deepak/Downloads/Software/JenkinsBuildJar/*.bkp"
-     echo "Step 1 complete"
-    //ren C:/Users/deepak/Downloads/Software/JenkinsBuildJar/[*].jar [*].bkp
-    copy "*.jar" "C:/Users/deepak/Downloads/Software/JenkinsBuildJar"
+  stage('Deployment'){
+      cd target
+      java -jar BookManagement-0.0.1-SNAPSHOT.jar --server.port=9001
+     //cd target
+     //del "C:/Users/deepak/Downloads/Software/JenkinsBuildJar/*.bkp"
+     //echo "Step 1 complete"
+     //ren C:/Users/deepak/Downloads/Software/JenkinsBuildJar/[*].jar [*].bkp
+     //copy "*.jar" "C:/Users/deepak/Downloads/Software/JenkinsBuildJar"
   }
 }
